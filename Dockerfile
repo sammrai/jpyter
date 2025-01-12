@@ -2,14 +2,15 @@ FROM continuumio/anaconda3
 
 # 必要なライブラリをインストールします
 RUN apt-get update
-RUN apt-get install -y --no-install-recommends g++ \
+RUN apt-get install -y --no-install-recommends \
+    g++ \
     gcc \
     libgl1-mesa-dev \
     make \
     unzip \
     chromium \
     udev \
-    libzbar-dev
+    libzbar-dev \
     build-essential \
     libta-lib0 \
     libta-lib-dev
