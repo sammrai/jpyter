@@ -2,7 +2,17 @@ FROM continuumio/anaconda3
 
 # 必要なライブラリをインストールします
 RUN apt-get update
-RUN apt-get install -y --no-install-recommends g++ gcc libgl1-mesa-dev make unzip chromium udev libzbar-dev
+RUN apt-get install -y --no-install-recommends g++ \
+    gcc \
+    libgl1-mesa-dev \
+    make \
+    unzip \
+    chromium \
+    udev \
+    libzbar-dev
+    build-essential \
+    libta-lib0 \
+    libta-lib-dev
 
 # フォントインストール
 RUN wget https://noto-website-2.storage.googleapis.com/pkgs/NotoSansCJKjp-hinted.zip -O /tmp/fonts_noto.zip && \
