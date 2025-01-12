@@ -47,17 +47,17 @@ RUN pip install \
     slicer \
     sqlalchemy
 
-RUN pip install \
-    tensorflow-datasets \
-    xgboost \
-    ipyleaflet \
-    TA-Lib-Precompiled \
-    pybotters \
-    pandas_ta \
-    telethon \
-    lightgbm \
-    scikit-optimize \
-    html5lib
+RUN pip install tensorflow-datasets &&\
+    pip install xgboost &&\
+    pip install ipyleaflet &&\
+    pip install TA-Lib-Precompiled &&\
+    pip install pybotters &&\
+    pip install pandas_ta &&\
+    pip install telethon &&\
+    pip install lightgbm &&\
+    pip install scikit-optimize &&\
+    pip install html5lib
+
 
 RUN pip install \
     paramiko \
