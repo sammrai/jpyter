@@ -12,51 +12,60 @@ RUN wget https://noto-website-2.storage.googleapis.com/pkgs/NotoSansCJKjp-hinted
 # 必要なライブラリをインストールします
 RUN pip install --upgrade pip
 RUN pip install \
-                aioinflux \
-                backtesting \
-                ccxt \
-                data_cache \
-                gast \
-                git+https://github.com/richmanbtc/crypto_data_fetcher.git@v0.0.14#egg=crypto_data_fetcher \
-                git+https://github.com/twopirllc/pandas-ta \
-                hyperas \
-                hyperopt==0.2.5 \
-                influxdb \
-                influxdb-client \
-                japanize-matplotlib \
-                joblib \
-                keras \
-                line-bot-sdk \
-                mlflow \
-                mplfinance \
-                nest-asyncio \
-                numpy \
-                opencv-contrib-python \
-                pandas \
-                pandarallel \
-                pyppeteer \
-                py4j \
-                scikit-learn \
-                scipy \
-                seaborn \
-                shap \
-                slicer \
-                sqlalchemy \
-                tensorflow-datasets \
-                xgboost \
-                ipyleaflet \
-                TA-Lib-Precompiled \
-                pybotters \
-                pandas_ta \
-                telethon \
-                lightgbm \
-                scikit-optimize \
-                libzbar-dev \
-                html5lib \
-                paramiko \
-                openapi-spec-validator \
-                albumentations \
-                ultralytics
+    aioinflux \
+    backtesting \
+    ccxt \
+    data_cache \
+    gast \
+    git+https://github.com/richmanbtc/crypto_data_fetcher.git@v0.0.14#egg=crypto_data_fetcher \
+    git+https://github.com/twopirllc/pandas-ta
+
+RUN pip install \
+    hyperas \
+    hyperopt==0.2.5 \
+    influxdb \
+    influxdb-client \
+    japanize-matplotlib \
+    joblib \
+    keras \
+    line-bot-sdk \
+    mlflow \
+    mplfinance \
+    nest-asyncio \
+    numpy
+
+RUN pip install \
+    opencv-contrib-python \
+    pandas \
+    pandarallel \
+    pyppeteer \
+    py4j \
+    scikit-learn \
+    scipy \
+    seaborn \
+    shap \
+    slicer \
+    sqlalchemy
+
+RUN pip install \
+    tensorflow-datasets \
+    xgboost \
+    ipyleaflet \
+    TA-Lib-Precompiled \
+    pybotters \
+    pandas_ta \
+    telethon \
+    lightgbm \
+    scikit-optimize \
+    html5lib
+
+RUN pip install \
+    paramiko \
+    openapi-spec-validator \
+    albumentations \
+    onnxruntime \
+    onnx
+
 RUN pip install -U jupyterlab
 
 ARG USERNAME=jnbuser
